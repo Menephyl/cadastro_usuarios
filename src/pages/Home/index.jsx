@@ -1,6 +1,6 @@
 
 import { Button, Container, Inputs, Title, TopBackground, ContainerInputs, InputLabel, Form} from './styles.js'
-import UsersImage from './assets/cats.png'
+import UsersImage from '../../assets/cats.png'
 
 
 
