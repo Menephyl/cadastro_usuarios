@@ -2,7 +2,7 @@ import { useRef } from 'react'
 
 import api from '../../services/api'
 import {
-  Button,
+
   Container,
   Inputs, Title,
   TopBackground,
@@ -10,6 +10,7 @@ import {
   InputLabel,
   Form
 } from './styles.js'
+import  Button  from '../../components/Button'
 import UsersImage from '../../assets/cats.png'
 
 
