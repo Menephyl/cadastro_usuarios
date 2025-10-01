@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 
- background-image: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%); 
+ background-image: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(24, 62, 70, 1) 100%); 
 display: flex;
 flex-direction:column;
 align-items: center;
@@ -14,22 +14,7 @@ min-height:100vh;
 
 `
 
-export const TopBackground = styled.div`
-background-image: linear-gradient(to right, #524343ff,#ffffff);
-height: 30vh;
-width: 90vw;
-max-width: 50rem;
-border-radius:1rem;
-display: flex;
-align-items: center;
-justify-content: center;
 
-img{
-    max-width: 100%;
-    max-height:100%;
-    border-radius:1rem;
-}
-`
 
 export const Form = styled.form`
 display: flex;
