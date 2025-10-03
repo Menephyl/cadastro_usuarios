@@ -16,8 +16,9 @@ import {
 } from './styles.js'
 import Button from '../../components/Button'
 
-import { Navigate } from 'react-router-dom'
+import {useNavigate } from 'react-router-dom'
 function ListUsers() {
+    const navigate = useNavigate()
     const [users,
         setUsers] = useState([])
     useEffect(() => {
@@ -55,7 +56,7 @@ function ListUsers() {
                     </CardUsers>
                 ))}
             </ContainerUsers>
-            <Button type="button" onClick={()=>Navigate('/')}>Voltar</Button>
+            <Button type="button" onClick={()=>navigate('/')}>Voltar</Button>
         </Container>
     )
 }
