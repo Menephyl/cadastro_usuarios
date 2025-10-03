@@ -1,4 +1,4 @@
-import UsersImage from '../../assets/cats.png'
+import UsersImage from '../../assets/clients3.png'
 import  Background  from './styles.js'
 function TopBackground() {
     return (

@@ -1,25 +1,22 @@
 Projeto: Cadastro de Usuários (node-notes + React)
 Mini aplicação full Stack
+![cadastro](image-7.png)
 Repositório unificado das anotações e práticas de back-end-<a href="https://github.com/Menephyl/node-notes" target="_blank"> de nodeNotes </a>
 
  (Express + Prisma) e front-end (React + Vite) para uma aplicação de<a href="https://github.com/Menephyl/cadastro_usuarios" target="_blank"> cadastro de usuários. </a>
 
 
 Projeto: Cadastro de Usuários
+![alt text](image-8.png)
 Repositório unificado de anotações e práticas para um mini-CRUD completo em Node.js (Express + Prisma) e React (Vite).
+
+![alt text](image-5.png)
+
 
 📖 Descrição
 Este projeto demonstra como criar uma aplicação de cadastro de usuários com:
 
-Back-end em Node.js
-
-Express e CORS para servidor HTTP
-
-Prisma ORM para acesso ao banco de dados
-
-Rotas REST: GET, POST, PUT, DELETE em /usuarios
-
-Front-end em React
+Front-end em React yarn + Vite 
 
 Vite como bundler
 
@@ -127,6 +124,7 @@ Axios: cliente configurado em /src/services/api.js
 React Router: navegação com useNavigate e <Routes>
 
 🗂 Estrutura de Pastas
+
 Código
 /
 ├── node-notes/               # Back-end (Express + Prisma)
@@ -149,14 +147,69 @@ Código
     ├── package.json
     └── vite.config.js
 📸 Screenshots
-Fluxo de requisições entre React e Express/Prisma
 
-Servidor rodando e endpoints funcionando
+![a](image-3.png)
 
-Tela de cadastro de usuários
+![alt text](image-4.png)
 
-Listagem com cards e remoção
+⚙️ Back-end= server.js 
+Configuração do MongoDB Atlas
 
+Crie um cluster no MongoDB Atlas (por exemplo, chamado project-0).
+
+Em Network Access, adicione seu IP público (ou 0.0.0.0/0 durante o desenvolvimento) para liberar a conexão.
+
+No Atlas, copie a connection string (algo como mongodb+srv://<usuário>:<senha>@cluster0.mongodb.net/project-0?retryWrites=true&w=majority).
+
+Crie um arquivo .env na raiz de node-notes com:
+
+Código
+DATABASE_URL="mongodb+srv://<usuário>:<senha>@cluster0.mongodb.net/project-0?retryWrites=true&w=majority"
+O mini-CRUD do back-end persistirá e recuperará todos os registros de usuários diretamente neste banco project-0.
+
+Instalação e configuração
+Clone o repositório
+
+Acesse a pasta do back-end
+
+bash
+cd node-notes
+Instale dependências
+
+bash
+npm install
+Gere o cliente Prisma e aplique migrações (se houver alterações no schema)
+
+bash
+npx prisma migrate dev --name init
+npx prisma generate
+Endpoints disponíveis
+Método	Endpoint	Descrição
+GET	/usuarios	Lista todos os usuários
+POST	/usuarios	Cria um novo usuário
+PUT	/usuarios/:id	Atualiza usuário pelo ID
+DELETE	/usuarios/:id	Deleta usuário pelo ID
+Executar o servidor
+bash
+npm run dev
+# ou
+node --watch server.js
+Saída esperada: servidor rodando na porta 3000
+
+Se quiser referências rápidas sobre configurar IP no Atlas ou ajustar TLS, dá um look na documentação oficial do MongoDB Atlas.
+
+Express e CORS para servidor HTTP
+
+Prisma ORM para acesso ao banco de dados
+
+Rotas REST: GET, POST, PUT, DELETE em /usuarios
+
+RESPONSIVIDADE - 
+.
+![alt text](image-5.png)
+.
+![alt text](image-6.png)
+![a](image-2.png)
 🤝 Contribuições
 Este projeto está aberto a pull requests e issues. Consulte as documentações oficiais de Express, Prisma e Vite para mais detalhes.
 

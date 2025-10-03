@@ -40,7 +40,7 @@ function ListUsers() {
     return (
         <Container>
             <TopBackground />
-            <Title>Listagem de Usuários/Clientes</Title>
+            <Title>Listagem de Sócios</Title>
 
 
             <ContainerUsers>

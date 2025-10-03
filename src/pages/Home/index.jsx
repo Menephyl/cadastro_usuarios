@@ -38,7 +38,7 @@ const navigate = useNavigate()
       <Container>
         <TopBackground />
         <Form>
-          <Title>CADASTRO DE USUÁRIO</Title>
+          <Title>CADASTRO DE SÓCIOS</Title>
 
           <ContainerInputs>
 
