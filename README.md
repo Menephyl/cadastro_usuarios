@@ -3,7 +3,7 @@
 ## 🖥️ Mini aplicação Full Stack
 ![cadastro](image-7.png)
 
-Repositório unificado que reúne anotações e práticas de **back-end** com [node-notes](https://github.com/Menephyl/node-notes) (Express + Prisma) e **front-end** com [cadastro_usuarios](https://github.com/Menephyl/cadastro_usuarios) (React + Vite).  
+Repositório unificado que reúne anotações e práticas de **back-end** com <a> [node-notes](https://github.com/Menephyl/node-notes)</a> (Express + Prisma) e **front-end** com [cadastro_usuarios](https://github.com/Menephyl/cadastro_usuarios) (React + Vite).  
 
 O objetivo é demonstrar um **mini CRUD completo** para cadastro e listagem de sócios/clientes.
 
