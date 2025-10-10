@@ -1,138 +1,76 @@
-Projeto: Cadastro de Usuários (node-notes + React)
-Mini aplicação full Stack
+# 📌 Projeto: Cadastro de Usuários (Node + React)
+
+## 🖥️ Mini aplicação Full Stack
 ![cadastro](image-7.png)
-Repositório unificado das anotações e práticas de back-end-<a href="https://github.com/Menephyl/node-notes" target="_blank"> de nodeNotes </a>
 
- (Express + Prisma) e front-end (React + Vite) para uma aplicação de<a href="https://github.com/Menephyl/cadastro_usuarios" target="_blank"> cadastro de usuários. </a>
+Repositório unificado que reúne anotações e práticas de **back-end** com [node-notes](https://github.com/Menephyl/node-notes) (Express + Prisma) e **front-end** com [cadastro_usuarios](https://github.com/Menephyl/cadastro_usuarios) (React + Vite).  
 
+O objetivo é demonstrar um **mini CRUD completo** para cadastro e listagem de sócios/clientes.
 
-Projeto: Cadastro de Usuários
+## SPA List Sócios page
 ![alt text](image-8.png)
-Repositório unificado de anotações e práticas para um mini-CRUD completo em Node.js (Express + Prisma) e React (Vite).
 
-![alt text](image-5.png)
+---
 
+# 📖 Descrição
 
-📖 Descrição
-Este projeto demonstra como criar uma aplicação de cadastro de usuários com:
+Este projeto mostra como criar uma aplicação de **cadastro de clientes/usuarios** por  meio de uma single page aplication com:
 
-Front-end em React yarn + Vite 
+### Front-end
+- React + Vite + YARN
+- styled-components para estilos  
+- axios para chamadas à API interna  
+- React Router para navegação SPA  
+- React Hooks (`useRef`, `useState`, `useEffect`)  
 
-Vite como bundler
+### Back-end
+- Node.js  
+- Express  
+- Prisma ORM (com MongoDB Atlas)  
+- Cors  
 
-styled-components para estilos
+---
 
-axios para chamadas à API interna
+# 🚀 Tecnologias
 
-React Router para navegação SPA
+### Back-end
+- Node.js  
+- Express  
+- Prisma ORM  
+- Cors  
+- MongoDB Atlas  
 
-React Hooks (useRef, useState, useEffect)
+### Front-end
+- React  
+- Vite  
+- styled-components  
+- axios  
+- react-router-dom  
+- prop-types  
 
-🚀 Tecnologias
-Node.js
+---
+# Instalaçao do Front End
 
-Express
+# Clone o repositório
+git clone https://github.com/Menephyl/cadastro_usuarios
 
-Prisma (SQLite ou PostgreSQL)
-
-Cors
-
-React
-
-Vite
-
-styled-components
-
-axios
-
-react-router-dom
-
-⚙️ Back-end
-Instalação e configuração
-Clone o repositório
-
-Acesse a pasta do back-end
-
-bash
-cd node-notes
-Instale dependências
-
-bash
-npm install
-Crie o arquivo .env com sua string de conexão:
-
-Código
-DATABASE_URL="file:./dev.db"
-Gere o cliente Prisma e aplique migrações:
-
-bash
-npx prisma migrate dev --name init
-npx prisma generate
-Endpoints disponíveis
-Método	Endpoint	Descrição
-GET	/usuarios	Lista todos os usuários
-POST	/usuarios	Cria um novo usuário
-PUT	/usuarios/:id	Atualiza usuário pelo ID
-DELETE	/usuarios/:id	Deleta usuário pelo ID
-Executar o servidor
-bash
-npm run dev
-# ou
-node --watch server.js
-Saída esperada: Servidor rodando na porta 3000
-
-🎨 Front-end
-Instalação
-Acesse a pasta do front-end
-
-bash
+# Acesse a pasta
 cd cadastro_usuarios
-Instale dependências
 
-bash
+# Instale dependências
 npm install
-Inicie o servidor de desenvolvimento
 
+# Inicie o servidor de desenvolvimento
+yarn run dev
+---
+# RESPONSIVIDADE 
+
+![alt text](image-6.png) 
+
+# 🗂 Estrutura de Pastas
+````
 bash
-npm run dev
-Páginas principais
-Home (/)
 
-Formulário de cadastro com campos para nome, idade e contato
-
-Usa useRef para capturar valores
-
-Chama POST /usuarios e redireciona para /listagem
-
-Listagem (/listagem)
-
-Busca GET /usuarios para exibir os usuários
-
-Cada card exibe nome, idade, e-mail e ícone de lixeira
-
-Ao clicar no ícone, chama DELETE /usuarios/:id e atualiza a lista
-
-Componentes-chave
-TopBackground: banner decorativo no topo
-
-Button: botões estilizados com styled-components
-
-Formulários: uso de useRef e tratamento de eventos
-
-Axios: cliente configurado em /src/services/api.js
-
-React Router: navegação com useNavigate e <Routes>
-
-🗂 Estrutura de Pastas
-
-Código
-/
-├── node-notes/               # Back-end (Express + Prisma)
-│   ├── prisma/
-│   │   └── schema.prisma
-│   ├── server.js
-│   ├── package.json
-│   └── .env
 └── cadastro_usuarios/        # Front-end (React + Vite)
     ├── public/
     ├── src/
@@ -146,67 +84,42 @@ Código
     │   └── App.jsx
     ├── package.json
     └── vite.config.js
-    
-📸 Screenshots
+    ```
 
-![a](image-3.png)
 
-![alt text](image-4.png)
 
-⚙️ Back-end= server.js 
-Configuração do MongoDB Atlas
+```
+````
+# ⚙️ Back-end
 
-Crie um cluster no MongoDB Atlas (por exemplo, chamado project-0).
+### Instalação e configuração
+```bash
+# Clone o repositório
+git clone https://github.com/Menephyl/node-notes
 
-Em Network Access, adicione seu IP público (ou 0.0.0.0/0 durante o desenvolvimento) para liberar a conexão.
+# Acesse a pasta
+cd node-notes
 
-No Atlas, copie a connection string (algo como mongodb+srv://<usuário>:<senha>@cluster0.mongodb.net/project-0?retryWrites=true&w=majority).
+# Instale dependências
+npm install
 
-Crie um arquivo .env na raiz de node-notes com:
+---
+````
+# ⚙️ Configuração do Banco de Dados (MongoDB Atlas)
 
-Código
+1. Crie um cluster no **MongoDB Atlas** (ex.: `project-0`).  
+2. Em **Network Access**, adicione seu IP público (ou `0.0.0.0/0` em desenvolvimento).  
+3. Copie a connection string e configure no arquivo `.env`:
+
+```env
 DATABASE_URL="mongodb+srv://<usuário>:<senha>@cluster0.mongodb.net/project-0?retryWrites=true&w=majority"
-O mini-CRUD do back-end persistirá e recuperará todos os registros de usuários diretamente neste banco project-0.
-
-Instalação e configuração
-Clone o repositório
-
-Acesse o link do back-end no repositorio node-notes 
-
-Instale dependências
-
-bash
-npm ou yarn  install
-Gere o cliente Prisma e aplique migrações (se houver alterações no schema)
-
-bash
+---
 npx prisma migrate dev --name init
 npx prisma generate
-Endpoints disponíveis
-Método	Endpoint	Descrição
-GET	/usuarios	Lista todos os usuários
-POST	/usuarios	Cria um novo usuário
-PUT	/usuarios/:id	Atualiza usuário pelo ID
-DELETE	/usuarios/:id	Deleta usuário pelo ID
-Executar o servidor
-bash
-npm run dev
-
-# ou
-node --watch server.js
-Saída esperada: servidor rodando na porta 3000
+---
 
 
+---
 
-RESPONSIVIDADE - 
-.
-![alt text](image-5.png)
-.
-![alt text](image-6.png)
-![a](image-2.png)
-.
-🤝 Contribuições
-Este projeto está aberto a pull requests e issues. Consulte as documentações oficiais de Express, Prisma e Vite para mais detalhes.
-
-📝 Licença
-Este projeto está licenciado sob a MIT License. Consulte o arquivo LICENSE para mais informações.
+````
+<img width="991" height="377" alt="image" src="https://github.com/user-attachments/assets/a5bc6f05-56f1-4078-a2bc-c395f15568db" />
