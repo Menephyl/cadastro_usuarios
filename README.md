@@ -146,6 +146,7 @@ Código
     │   └── App.jsx
     ├── package.json
     └── vite.config.js
+    
 📸 Screenshots
 
 ![a](image-3.png)
@@ -170,14 +171,12 @@ O mini-CRUD do back-end persistirá e recuperará todos os registros de usuário
 Instalação e configuração
 Clone o repositório
 
-Acesse a pasta do back-end
+Acesse o link do back-end no repositorio node-notes 
 
-bash
-cd node-notes
 Instale dependências
 
 bash
-npm install
+npm ou yarn  install
 Gere o cliente Prisma e aplique migrações (se houver alterações no schema)
 
 bash
@@ -192,17 +191,12 @@ DELETE	/usuarios/:id	Deleta usuário pelo ID
 Executar o servidor
 bash
 npm run dev
+
 # ou
 node --watch server.js
 Saída esperada: servidor rodando na porta 3000
 
-Se quiser referências rápidas sobre configurar IP no Atlas ou ajustar TLS, dá um look na documentação oficial do MongoDB Atlas.
 
-Express e CORS para servidor HTTP
-
-Prisma ORM para acesso ao banco de dados
-
-Rotas REST: GET, POST, PUT, DELETE em /usuarios
 
 RESPONSIVIDADE - 
 .
@@ -210,6 +204,7 @@ RESPONSIVIDADE -
 .
 ![alt text](image-6.png)
 ![a](image-2.png)
+.
 🤝 Contribuições
 Este projeto está aberto a pull requests e issues. Consulte as documentações oficiais de Express, Prisma e Vite para mais detalhes.
 
